@@ -7,11 +7,26 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: Text('League stats'),
-      ),
-      body: LoginScreen(),
-    ));
+        home: DefaultTabController(
+            length: 3,
+            child: Scaffold(
+              appBar: AppBar(
+                title: Text('League stats'),
+                bottom: TabBar(
+                  tabs: <Widget>[
+                    Tab(
+                      text: 'My profile',
+                    ),
+                    Tab(
+                      text: 'Stats',
+                    ),
+                    Tab(
+                      text: 'Champions',
+                    ),
+                  ],
+                ),
+              ),
+              body: LoginScreen(),
+            )));
   }
 }

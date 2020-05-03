@@ -5,8 +5,10 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Hello'),
-    );
+    return TabBarView(children: <Widget>[
+      Center(child: Text('My profile')),
+      Center(child: Text('Stats')),
+      Center(child: Text('Champions'))
+    ]);
   }
 }
